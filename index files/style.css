@@ -1,0 +1,424 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+body {
+	line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+a {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted;
+	cursor:help;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+	display:block;
+	height:1px;
+	border:0;  
+	border-top:1px solid #cccccc;
+	margin:1em 0;
+	padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+
+
+/*
+==============================
+My Styling begins from here
+==============================
+*/
+
+body {
+	background-color: #eee;
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+	color: #222;
+	text-align: center;
+	align-content: center;
+	height: 100%;
+}
+
+@keyframes colorful {
+	0% {color: black;}
+	20% {color: red;}
+	40% {color: blue;}
+	60% {color: #1CB81A;}
+	80% {color: #EBE647;}
+	100% {color: black;}
+}
+
+@keyframes fade-in {
+	0% {opacity: 0;}
+	50% {opacity: 0.5;}
+	100% {opacity: 1;}
+}
+
+.present-img {
+	width: 100%;
+	height: 1020px;
+	position: relative;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+}
+
+.present-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	text-align: left;
+}
+
+.header h1 {
+	width: 40%;
+	float: left;
+	font-size: 50px;
+	line-height: 100px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+}
+
+.header h1:hover {
+	animation-name: colorful;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.navigation nav {
+	width: 60%;
+	height: 100px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.navigation nav ul li {
+	position: relative;
+	display: block;
+	float: right;
+	line-height: 100px;
+	padding: 0 20px;
+	font-size: 22px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: black;
+	/* transition: hover; */
+	transition-duration: 0.3s;
+}
+
+.navigation a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+#bottom-text {
+	color: #fff;
+	font-size: 70px;
+	font-family: cursive;
+	position: absolute;
+	bottom: 140px;
+	text-shadow: 4px 4px 10px black;
+	opacity: 0;
+	animation-name: fade-in;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	opacity: 1;
+	font-family: 'Merienda One', cursive;
+	line-height: 1.4em;
+}
+
+.first {
+	width: 100%;
+	height: 1000px;
+	position: relative;
+}
+
+ #profile-pic {
+	position: absolute;
+	width: 32%;
+	left: 10%;
+	margin: 6%;
+	margin-left: 0%;
+	border-radius: 50px;
+}
+
+.first p {
+	width: 22%;
+	position: absolute;
+	margin: 6%;
+	margin-right: 10%;
+	margin-top: 16%;
+	right: 4%;
+	float: right;
+	padding: 40px;
+	border: 2px solid #444;
+	border-radius: 15px;
+	line-height: 1.4em;
+}
+
+#small-note {
+	padding: 12px;
+	margin-bottom: 12%;
+	margin-top: 35%;
+	margin-right: 11.4%;
+	font-size: 0.6em;
+	color: #555;
+	border: 1px solid #555;
+}
+
+h2, h4 {
+	color: #0CADAB;
+}
+
+h2 {
+	text-shadow: 2px 2px 3px #097A79;
+	font-size: 60px;
+	padding: 30px;
+}
+
+h4 {
+	color: #0BB6E0;
+	font-size: 30px;
+	padding: 10px;
+	text-shadow: 1px 1px 1px #097A79;
+}
+
+.second {
+	width: 100%;
+	height: 750px;
+}
+
+.second:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.second img {
+	height: 4em;
+	width: 4em;
+	border-radius: 50%;
+	align-content: left;
+}
+
+.leftcolumn ul {
+	width: 50%;
+	float: left;
+	line-height: 3em;
+}
+
+.rightcolumn ul {
+	width: 50%;
+	float: right;
+	line-height: 3em;
+}
+
+.leftcolumn ul li, .rightcolumn ul li {
+	margin-top: 10px;
+}
+
+.hobby-list {
+	display: inline;
+	
+}
+.hobby-image {
+	margin-top: 10px;
+}
+
+#right-text {
+	float: right;
+	margin-right: 8em;
+}
+
+#left-text {
+	float: left;
+	margin-left: 8em;
+}
+
+/* after this is pretty good and sorted out  */
+.third {
+	width: 100%;
+}
+
+.third p, .second p, .fifth p {
+	padding: 3%;
+	font-size: 1.08em;
+}
+
+.third img {
+	width: 30%;
+	float: left;
+	margin-left: 5%;
+	border-radius: 30px;
+}
+
+#achieve-right-img img {
+	float: right;
+	margin-right: 5%;
+}
+
+.third ul li {
+	padding: 5%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.third ul li:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.achieve-adjuster {
+	padding: 10px;
+	margin: 3%;
+	margin-top: 4%;
+}
+
+.fifth button {
+	width: 19%;
+	margin: 6%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 1%;
+	font-size: 1.1em;
+	border-radius: 50px;
+	color: white;
+	border: none;
+	transition-duration: 0.5s;
+}
+
+#linkedin {
+	margin-left: 0;
+	margin-right: 0;
+	background-color: #2867B2;
+	transition-duration: 0.5s;
+}
+
+#linkedin:hover {
+	box-shadow: 0 0 20px  #2867B2;
+}
+
+#facebook {
+	background-color: #4267B2;
+}
+
+#facebook:hover {
+	box-shadow: 0 0 20px  #4267B2;
+}
+
+#gmail {
+	border: 5px solid #D44638;
+	color: black;
+}
+
+#gmail:hover {
+	box-shadow: 0 0 20px  #D44638;
+}
+
+#github {
+	background-color: #000;
+}
+
+#github:hover {
+	box-shadow: 0 0 20px  #000;
+}
+
+
+
+/* bring it to the end  */
+footer {
+	font-size: small;
+	padding-bottom: 10px;
+}
