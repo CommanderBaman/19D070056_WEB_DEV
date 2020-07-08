@@ -383,7 +383,7 @@ h4 {
 	margin-left: 0;
 	margin-right: 0;
 	background-color: #2867B2;
-	transition-duration: 0.5s;
+	transition-duration: 0.3s;
 }
 
 #linkedin:hover {
@@ -415,9 +415,6 @@ h4 {
 	box-shadow: 0 0 20px  #000;
 }
 
-
-
-/* bring it to the end  */
 footer {
 	font-size: small;
 	padding-bottom: 10px;
