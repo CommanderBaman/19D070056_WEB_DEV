@@ -94,7 +94,6 @@ hr {
 	display:block;
 	height:1px;
 	border:0;  
-	border-top:1px solid #cccccc;
 	margin:1em 0;
 	padding:0;
 }
@@ -112,7 +111,7 @@ My Styling begins from here
 */
 
 body {
-	background-color: #eee;
+	background-color: #F3FFED;
 	font-size: 25px;
 	font-family: 'Open Sans', sans-serif;
 	color: #222;
@@ -131,9 +130,15 @@ body {
 }
 
 @keyframes fade-in {
-	0% {opacity: 0;}
-	50% {opacity: 0.5;}
-	100% {opacity: 1;}
+	0% {
+		opacity: inherit;
+		color: inherit;
+	}
+	50% {opacity: 0.8;}
+	100% {
+		opacity: 1;
+		color: black;
+	}
 }
 
 .present-img {
@@ -209,56 +214,12 @@ body {
 	position: absolute;
 	bottom: 140px;
 	text-shadow: 4px 4px 10px black;
-	opacity: 0;
-	animation-name: fade-in;
-	animation-duration: 3s;
-	animation-timing-function: linear;
-	opacity: 1;
 	font-family: 'Merienda One', cursive;
 	line-height: 1.4em;
 }
 
-.first {
-	width: 100%;
-	height: 1000px;
-	position: relative;
-}
-
- #profile-pic {
-	position: absolute;
-	width: 32%;
-	left: 10%;
-	margin: 6%;
-	margin-left: 0%;
-	border-radius: 50px;
-}
-
-.first p {
-	width: 22%;
-	position: absolute;
-	margin: 6%;
-	margin-right: 10%;
-	margin-top: 16%;
-	right: 4%;
-	float: right;
-	padding: 40px;
-	border: 2px solid #444;
-	border-radius: 15px;
-	line-height: 1.4em;
-}
-
-#small-note {
-	padding: 12px;
-	margin-bottom: 12%;
-	margin-top: 35%;
-	margin-right: 11.4%;
-	font-size: 0.6em;
-	color: #555;
-	border: 1px solid #555;
-}
-
 h2, h4 {
-	color: #0CADAB;
+	color: #48C258;
 }
 
 h2 {
@@ -268,21 +229,69 @@ h2 {
 }
 
 h4 {
-	color: #0BB6E0;
+	color: hsl(124, 63%, 49%);
 	font-size: 30px;
 	padding: 10px;
 	text-shadow: 1px 1px 1px #097A79;
 }
 
-.second {
+.first, .second, .third, .fourth, .fifth {
 	width: 100%;
-	height: 750px;
+	margin-bottom: 30px;
 }
 
-.second:after {
-	content: "";
+.first-left {
+	width: 44%;
+	float: left;
+}
+
+.first-right {
+	width: 56%;
+	float: right;
+	align-content: center;
+}
+
+#profile-pic {
+	width: 72.72%;
+	border-radius: 50px;
+	float: left;
+	margin: 2%;
+	margin-top: 5%;
+	margin-left: 22.72%;
+	margin-top: 1.5em;
+}
+
+#main-introduction {
+	margin: 20% 26%;
+	width: 39.28%;
+	margin-bottom: 2%;
+	padding: 40px;
+	line-height: 1.4em;
+	border: 2px solid #444;
+	border-radius: 15px;
+	text-align: center;
+} 
+
+#small-note {
+	margin: 16% 29.1%;
+	margin-top: 0;
+	width: 39.28%;
+	padding: 12px;
+	font-size: 0.6em;
+	color: #555;
+	border: 1px solid #555;
+	border-radius: 15px;
+
+}
+
+.first:after {
 	clear: both;
-	display: block;
+	content: "";
+}
+
+.second, .fourth {
+	width: 100%;
+	background-color: #FFFFE0;
 }
 
 .second img {
@@ -290,6 +299,12 @@ h4 {
 	width: 4em;
 	border-radius: 50%;
 	align-content: left;
+}
+
+.second:after, .first:after {
+	content: "";
+	clear: both;
+	display: block;
 }
 
 .leftcolumn ul {
@@ -308,50 +323,49 @@ h4 {
 	margin-top: 10px;
 }
 
-.hobby-list {
-	display: inline;
-	
-}
-.hobby-image {
-	margin-top: 10px;
-}
-
-#right-text {
+.hobby-image-right, .hobby-image-left {
 	float: right;
-	margin-right: 8em;
+	margin-top: 0.8em;
 }
 
-#left-text {
+.hobby-image-right{
 	float: left;
-	margin-left: 8em;
+	margin-left: 3em;
 }
 
-/* after this is pretty good and sorted out  */
-.third {
-	width: 100%;
+.hobby-image-left{
+	margin-right: 3em;
 }
 
-.third p, .second p, .fifth p {
+
+.second p, .third p, .fourth p, .fifth p {
 	padding: 3%;
 	font-size: 1.08em;
 }
 
+
+
 .third img {
-	width: 30%;
+	width: 80%;
+	height: auto;
+	padding: 20px;
+	border-radius: 60px;
+}
+
+.achieve-img-left, .achieve-img-right {
+	width: 40%;
 	float: left;
-	margin-left: 5%;
-	border-radius: 30px;
 }
 
-#achieve-right-img img {
+.achieve-text-left, .achieve-text-right {
+	width: 60%;
+	margin-top: 6%;
+	float: left;
+	vertical-align: center;
+}
+
+.achieve-img-right, .achieve-text-right {
 	float: right;
-	margin-right: 5%;
-}
-
-.third ul li {
-	padding: 5%;
-	padding-top: 2%;
-	padding-bottom: 2%;
 }
 
 .third ul li:after {
@@ -360,11 +374,21 @@ h4 {
 	display: block;
 }
 
-.achieve-adjuster {
-	padding: 10px;
-	margin: 3%;
-	margin-top: 4%;
+.fourth table {
+	margin: 10%;
+	margin-top: 0;
+	margin-bottom: 3%;
+	width: 80%;
+	align-content: center;
+	box-shadow: 0 0 5px #444;
+	
 }
+
+.fourth table th, .fourth table td {
+	border: 1px solid #555;
+	padding: 0.5em;
+	/* border-radius: 100px; */
+}	
 
 .fifth button {
 	width: 19%;
@@ -408,14 +432,16 @@ h4 {
 }
 
 #github {
-	background-color: #000;
+	background-color: #2E2E2E;
 }
 
 #github:hover {
-	box-shadow: 0 0 20px  #000;
+	box-shadow: 0 0 20px  #2E2E2E;
+	background-color: #000;
 }
 
 footer {
+	background-color: #E0FFE9;
 	font-size: small;
 	padding-bottom: 10px;
 }
