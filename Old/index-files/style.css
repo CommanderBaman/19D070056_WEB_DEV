@@ -1,0 +1,447 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+body {
+	line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+
+nav ul {
+	list-style:none;
+}
+
+blockquote, q {
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content:'';
+	content:none;
+}
+
+a {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+	background-color:#ff9;
+	color:#000;
+	text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+	background-color:#ff9;
+	color:#000;
+	font-style:italic;
+	font-weight:bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom:1px dotted;
+	cursor:help;
+}
+
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+	display:block;
+	height:1px;
+	border:0;  
+	margin:1em 0;
+	padding:0;
+}
+
+input, select {
+	vertical-align:middle;
+}
+
+
+
+/*
+==============================
+My Styling begins from here
+==============================
+*/
+
+body {
+	background-color: #F3FFED;
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+	color: #222;
+	text-align: center;
+	align-content: center;
+	height: 100%;
+}
+
+@keyframes colorful {
+	0% {color: black;}
+	20% {color: red;}
+	40% {color: blue;}
+	60% {color: #1CB81A;}
+	80% {color: #EBE647;}
+	100% {color: black;}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: inherit;
+		color: inherit;
+	}
+	50% {opacity: 0.8;}
+	100% {
+		opacity: 1;
+		color: black;
+	}
+}
+
+.present-img {
+	width: 100%;
+	height: 1020px;
+	position: relative;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+}
+
+.present-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	text-align: left;
+}
+
+.header h1 {
+	width: 40%;
+	float: left;
+	font-size: 50px;
+	line-height: 100px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+}
+
+.header h1:hover {
+	animation-name: colorful;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+.navigation nav {
+	width: 60%;
+	height: 100px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.navigation nav ul li {
+	position: relative;
+	display: block;
+	float: right;
+	line-height: 100px;
+	padding: 0 20px;
+	font-size: 22px;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: black;
+	/* transition: hover; */
+	transition-duration: 0.3s;
+}
+
+.navigation a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+#bottom-text {
+	color: #fff;
+	font-size: 70px;
+	font-family: cursive;
+	position: absolute;
+	bottom: 140px;
+	text-shadow: 4px 4px 10px black;
+	font-family: 'Merienda One', cursive;
+	line-height: 1.4em;
+}
+
+h2, h4 {
+	color: #48C258;
+}
+
+h2 {
+	text-shadow: 2px 2px 3px #097A79;
+	font-size: 60px;
+	padding: 30px;
+}
+
+h4 {
+	color: hsl(124, 63%, 49%);
+	font-size: 30px;
+	padding: 10px;
+	text-shadow: 1px 1px 1px #097A79;
+}
+
+.first, .second, .third, .fourth, .fifth {
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.first-left {
+	width: 44%;
+	float: left;
+}
+
+.first-right {
+	width: 56%;
+	float: right;
+	align-content: center;
+}
+
+#profile-pic {
+	width: 72.72%;
+	border-radius: 50px;
+	float: left;
+	margin: 2%;
+	margin-top: 5%;
+	margin-left: 22.72%;
+	margin-top: 1.5em;
+}
+
+#main-introduction {
+	margin: 20% 26%;
+	width: 39.28%;
+	margin-bottom: 2%;
+	padding: 40px;
+	line-height: 1.4em;
+	border: 2px solid #444;
+	border-radius: 15px;
+	text-align: center;
+} 
+
+#small-note {
+	margin: 16% 29.1%;
+	margin-top: 0;
+	width: 39.28%;
+	padding: 12px;
+	font-size: 0.6em;
+	color: #555;
+	border: 1px solid #555;
+	border-radius: 15px;
+
+}
+
+.first:after {
+	clear: both;
+	content: "";
+}
+
+.second, .fourth {
+	width: 100%;
+	background-color: #FFFFE0;
+}
+
+.second img {
+	height: 4em;
+	width: 4em;
+	border-radius: 50%;
+	align-content: left;
+}
+
+.second:after, .first:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.leftcolumn ul {
+	width: 50%;
+	float: left;
+	line-height: 3em;
+}
+
+.rightcolumn ul {
+	width: 50%;
+	float: right;
+	line-height: 3em;
+}
+
+.leftcolumn ul li, .rightcolumn ul li {
+	margin-top: 10px;
+}
+
+.hobby-image-right, .hobby-image-left {
+	float: right;
+	margin-top: 0.8em;
+}
+
+.hobby-image-right{
+	float: left;
+	margin-left: 3em;
+}
+
+.hobby-image-left{
+	margin-right: 3em;
+}
+
+
+.second p, .third p, .fourth p, .fifth p {
+	padding: 3%;
+	font-size: 1.08em;
+}
+
+
+
+.third img {
+	width: 80%;
+	height: auto;
+	padding: 20px;
+	border-radius: 60px;
+}
+
+.achieve-img-left, .achieve-img-right {
+	width: 40%;
+	float: left;
+}
+
+.achieve-text-left, .achieve-text-right {
+	width: 60%;
+	margin-top: 6%;
+	float: left;
+	vertical-align: center;
+}
+
+.achieve-img-right, .achieve-text-right {
+	float: right;
+}
+
+.third ul li:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.fourth table {
+	margin: 10%;
+	margin-top: 0;
+	margin-bottom: 3%;
+	width: 80%;
+	align-content: center;
+	box-shadow: 0 0 5px #444;
+	
+}
+
+.fourth table th, .fourth table td {
+	border: 1px solid #555;
+	padding: 0.5em;
+	/* border-radius: 100px; */
+}	
+
+.fifth button {
+	width: 19%;
+	margin: 6%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 1%;
+	font-size: 1.1em;
+	border-radius: 50px;
+	color: white;
+	border: none;
+	transition-duration: 0.5s;
+}
+
+#linkedin {
+	margin-left: 0;
+	margin-right: 0;
+	background-color: #2867B2;
+	transition-duration: 0.3s;
+}
+
+#linkedin:hover {
+	box-shadow: 0 0 20px  #2867B2;
+}
+
+#facebook {
+	background-color: #4267B2;
+}
+
+#facebook:hover {
+	box-shadow: 0 0 20px  #4267B2;
+}
+
+#gmail {
+	border: 5px solid #D44638;
+	color: black;
+}
+
+#gmail:hover {
+	box-shadow: 0 0 20px  #D44638;
+}
+
+#github {
+	background-color: #2E2E2E;
+}
+
+#github:hover {
+	box-shadow: 0 0 20px  #2E2E2E;
+	background-color: #000;
+}
+
+footer {
+	background-color: #E0FFE9;
+	font-size: small;
+	padding-bottom: 10px;
+}
