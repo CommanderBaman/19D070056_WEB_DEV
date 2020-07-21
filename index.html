@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="keywords" content="Shubham Ojha, IITB, IIT Bombay, Student, Tinkerer">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/4106bd1142.js" crossorigin="anonymous"></script>
 	<link rel="shortcut icon" href="index-files/icons8-snowboarder-emoji-48.png">
 	<link rel="stylesheet" href="index-files/style.css">
 	<title>My Title</title>
@@ -34,11 +35,11 @@ red: #E85A4F; - headings
 			
 			<ul>
 				<div class="nav-links">
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Introduction</a></li>
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Hobbies</a></li>
-					<li><a href="#">Contact Me</a></li>
+					<li><a href="#home">Home</a></li>
+					<li><a href="#introduction">Introduction</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#hobbies">Hobbies</a></li>
+					<li><a href="#contact">Contact Me</a></li>
 				</div>
 			</ul>
 		</nav>
@@ -46,7 +47,7 @@ red: #E85A4F; - headings
 		<footer>
 			<!-- <hr /> -->
 
-			&#169; Copyright to Shubham Ojha <br />
+			&#169; Designed by Shubham Ojha <br />
 			<a target="_blank" href="https://icons8.com/icons/set/snowboarder-emoji">Snowboarder Emoji icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
 		</footer>
 		<div class="burger">
@@ -55,23 +56,244 @@ red: #E85A4F; - headings
 			<div id="line3"></div>
 		</div>
 	</div>
+
 	<div class="empty-clear"></div>
 
 	<div class="main">
-		<div class="first">
-			<!-- <img src="index-files/Kanyakumari-small-temple.jpg" alt=""> -->
+		<div class="first" id="home">
+			<img src="index-files/Kanyakumari-small-temple.jpg" alt="Small Hut on the edge of Sea">
+			<h2>
+				I explore interesting things
+				<!-- 		
+					thinking about a slider that can clear and make these appear		
+				<ul>
+					
+					<li>Developer</li>
+					<li>Photographer</li>
+					<li>Tech Enthusiast</li>
+				</ul> -->
+			</h2>
 		</div>
+		<div class="empty-clear"></div>
 
+		<div class="second" id="introduction">
+			<div class="intro-box">
+				<p>Hi, I am Shubham Ojha. <br /> I am discovering and evolving myself while rocking my college life. <br /> These are some of my qualifications<br /></p>
+				<div class="qual-box">
+					<div class="qual-photo-left">
+						<img src="index-files/iitb_logo.png" alt="IITB logo" />
+					</div>
+					<div class="qual-text-right">
+						<p>
+							Currently studying Electrical Engineering from IIT Bombay
+						</p>
+					</div>
+				</div>
+				<div class="qual-box">
+					<div class="qual-photo-left">
+						<img src="index-files/CBSE-logo.png" alt="CBSE logo" />
+					</div>
+					<div class="qual-text-right">
+						<p>
+							Scored 96% in CBSE boards
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="empty-clear"></div>
 
+		<div class="third" id="projects">
+			<h2>
+				Projects
+			</h2>
+			<p class="project-intro">
+				Here, are some of the projects that I have made throughout my life. I learnt a lot building them. They also shaped the way I am today. 
+			</p>
+			<div class="projects">
+				<div id="project1">
+					<div class="project-pic">
+						<img src="index-files/MAST-logo.png" alt="MAST Logo" />
+					</div>
+					<div class="project-descript">
+						<p>
+							This is a project I made during ITSP 2020. This project aims to replace the need of Traffic Policemen at traffic lights.<br /> 
+						</p>
+						<p class="project-team">
+							I made this project along with:
+							<ul>
+								<li>Mayur Ware</li>
+								<li>Akash Fokane</li>
+								<li>Tanmay Hiremath</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+				<div id="project2">
+					<div class="project-pic">
+						<img src="index-files/XLR8-bot.jpg" alt="My XLR8 bot">
+					</div>
+					<div class="project-descript">
+						<p>
+							I participated in XLR8 in which we had to make a car to navigate through some challenging situations. We made a bluetooth enabled car for that purpose.<br />
+						</p>
+						<p class="project-team">
+							It was pretty fun making it with:
+							<ul>
+								<li>Akash Fokane</li>
+								<li>Mihir Ghumbre</li>
+								<li>Rushikesh Metkar</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="empty-clear"></div>
+
+		<div class="fourth" id="hobbies">
+			<h2>
+				Hobbies
+			</h2>
+			<p class="hobby-intro">
+				Here are some of the things that I love to do. Most of them were discovered during my ongoing college years.
+			</p>
+			<div class="hobby-carousel-container"> <!--carousel-container-->
+				<i class="fas fa-chevron-right" id="next-btn"></i>
+				<i class="fas fa-chevron-left" id="back-btn"></i>
+				<div class="hobby-carousel"> <!--carousel-slide-->
+					<img src="index-files/hobby-photo.jpg" alt="Girl clicking a photo" id="last-img">
+					<img src="index-files/hobby-gaming.jpg" alt="Gaming equipment">
+					<img src="index-files/hobby-code.jpg" alt="Codes">
+					<img src="index-files/hobby-football.jpg" alt="Football at a corner">
+					<img src="index-files/hobby-book.jpg" alt="An open book on a table">
+					<img src="index-files/hobby-photo.jpg" alt="Girl clicking a photo">
+					<img src="index-files/hobby-gaming.jpg" alt="Gaming equipment" id="first-img">
+
+				<!-- if want table then at end - not completed till now -->
+				</div>
+				
+			</div>
+
+		</div>
+		<div class="empty-clear"></div>
+
+		<div class="fifth" id="contact">
+			<h2>
+				Contact Me 
+			</h2>
+
+			<!-- <p>
+				You can contact me through the form below. I will answer it as soon as I can. 
+			</p> -->
+			<!-- <div class="contact-form-container"></div> -->
+			<div class="contact-form">
+				<form action="https://formspree.io/mnqgokqo" method="POST">
+					<label>
+						<p>Your name: <br /></p> 
+						<input type="text" name="Name">
+					</label>
+					<br />
+					<label>
+						<p>Your email: <br /></p> 
+						<input type="text" name="_replyto">
+					</label>
+					<br />
+					<label>
+						<p>Your message: <br /></p> 
+						<textarea name="Message"></textarea>
+					</label>
+					<br />
+					<button type="submit">Send</button>
+					<div class="empty-clear"></div>
+				</form>
+			</div>
+			<!-- </div> -->
+			<div class="main-contact">
+				You can contact me on: <br />
+				<a href="mailto:shubhamojha18@gmail.com" id="mail">shubhamojha18@gmail.com</a> <br /> <br />
+				Or via the mediums below: <br />
+				<a href="https://www.facebook.com/shubham.ojha.90/"><i class="fab fa-facebook-square icons" style="color: #2867B2;"></i></a>
+				<a href="https://www.linkedin.com/in/shubham-ojha-80b52a1a9/"><i class="fab fa-linkedin icons" style="color: #4267B2;"></i></a>
+				<a href="https://github.com/CommanderBaman"><i class="fab fa-github-square icons"></i></a>
+			</div>
+		</div>
+		
 		<footer>
 			<!-- <hr /> -->
 
-			&#169; Copyright to Shubham Ojha <br />
-			<a target="_blank" href="https://icons8.com/icons/set/snowboarder-emoji">Snowboarder Emoji icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+			&#169; Designed by Shubham Ojha <br />
+			<a target="_blank" href="https://icons8.com/icons/set/snowboarder-emoji">Snowboarder Emoji icon</a> by <a target="_blank" href="https://icons8.com">Icons8</a>
 		</footer>
 	</div>
-
+	
 	<script src="index-files/main.js"></script>
 </body>
 
 </html>
+
+	P.S. Don't resize once opened as it messes up the carousel in the hobby section. If you have to resize, then refresh after being done resizing. 
+
+
+	<!-- <table>
+		<tr>
+			<td>
+				<div class= "hobby-img">
+					<img src="index-files/hobby-coding.jpg" alt="Codes" class="hobby-img"/>
+				</div>
+				<div class="hobby-text">
+					Gaming
+				</div>
+			</td>
+			
+			<td>
+				<div class="hobby-img">
+					<img src="index-files/hobby-gaming.jpg" alt="Gaming equipment" />
+				</div>
+				<div class="hobby-text">
+					Gaming
+				</div>
+				<div class="hobby-description">
+					I like to game a lot. I have played a fair share of games like Assassin's Creed, Call of Duty, etc. 	
+				</div>
+			</td>
+			
+			<td>
+				<div class="hobby-img">
+					<img src="index-files/hobby-football.jpg" alt="Football at corner">
+				</div>
+				<div class="hobby-text">
+					Playing Football
+				</div>
+				
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div class="hobby-img">
+					<img src="index-files/hobby-book.jpg" alt="Stack of Books" />
+				</div>
+				<div class="hobby-text">
+					Read Books and Stuff
+				</div>
+			</td>
+	
+			<td>
+				<div class="hobby-img">
+					<img src="index-files/hobby-binge.jpg" alt="Person watching TV">
+				</div>
+				<div class="hobby-text">
+					Binging a Series
+				</div>
+			</td>
+			<td>
+				<div class="hobby-img">
+					<img src="index-files/hobby-photo.jpg" alt="Girl clicking photo">
+				</div>
+				<div class="hobby-text">
+					Photography
+				</div>
+			</td>
+		</tr>
+	</table> -->

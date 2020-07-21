@@ -111,21 +111,28 @@ input, select {
 My Styling begins from here
 ==============================
 */
+
+* {
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+}
+
 body {
 	background-color: #EAE7DC;
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	align-content: center;
+
 }
 
 .nav-bar {
 	width: 21%;
 	position: fixed;
 	height: 100vh;
-	border-right: #D8C3A5 5px solid;
 	box-shadow: 1px 0px 10px #8E8D8A;
 	background-color: #D8C3A5;
+	z-index: 1;
 
 }
 
@@ -137,7 +144,7 @@ body {
 }
 
 .nav-bar h1 {
-	font-size: 32px;
+	font-size: 1.8em;
 	margin: 24px 10px 48px;
 	font-weight: 500;
 }
@@ -189,13 +196,22 @@ body {
 	margin-bottom: 20px;
 }
 
-/* .nav-links a:hover {
-	color: #8E8D8A;
-} */
+.nav-links a:hover {
+	color: #E98074;
+}
+
+.nav-links a {
+	transition-duration: 0.35s;
+}
 
 
 .main footer {
 	display: none;
+	padding: 10px;
+}
+
+.main footer a {
+	border-bottom: 1px dotted #8E8D8A;
 }
 
 .burger {
@@ -221,10 +237,293 @@ body {
 	transform:  translate( -6px, -9px) rotate( 45deg);
 }
 
-@media screen and ( max-width: 1024px) {
-	.nav-bar {
-		width: 24%;
-	}
+.main {
+	width: 79%;
+	z-index: 2;
+	float: right;
+}
+
+.first {
+	position: relative;
+	align-content: center;
+}
+
+.main .first img {
+	height: 100vh;
+	opacity: 0.9;
+	width: 100%;
+	-webkit-mask-image: linear-gradient(to top, transparent 5%, black 10%);
+	mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+
+}
+
+.main .first h2 {
+	position: absolute;
+	width: 80%;
+	bottom: 14%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 4.45em;
+	color: #E85A4F;
+	color: #EAE7DC;
+	font-weight: 450;
+	text-shadow: 0px 0px 8px black;
+	
+}
+
+.second {
+	/* capping out at 60vh */
+	height: 60vh;
+	width: 75%;
+	margin: auto;
+	align-content: center;
+	position: relative;
+	font-size: 1.2em;
+}
+
+.intro-box {
+	padding: 40px;
+	width: 60%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: 2.8px solid #D8C3A5;
+	box-shadow: 0px 0px 5px #8E8D8A;
+	background-color: #f6f6f0;  
+	line-height: 1.24em;
+}
+
+.qual-box {
+	width: 80%;
+	display: flex;
+	padding: 10px;
+	margin: auto;
+}
+
+.qual-photo-left img {
+	width: 100px;
+	height: auto;
+	padding: 10px;
+}
+
+.qual-text-right {
+	margin: auto;
+	font-size: 0.9em;
+	padding: 10px;
+}
+
+.third {
+	width: 80%;
+	margin: auto;
+	margin-top: 10px;
+}
+
+.third h2 ,.fourth h2, .fifth h2 {
+	font-size: 2.8em;
+	padding: 20px;
+	font-weight: 550;
+	color: #E85A4F;
+}
+
+.third .project-intro, .fourth p {
+	font-size: 1.2em;
+	padding: 20px;
+}
+
+.projects {
+	width: 100%;
+	display: flex;
+	/* background-color: red; */
+}
+
+#project1, #project2 {
+	width: 49%;
+	margin: 1%;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px #8E8D8A;
+	border: 2.8px solid #D8C3A5;
+	background-color: #f6f6f0;  
+	margin-top: 3%;
+	/* background-color: #f1f0e7; */
+}
+
+.third .projects .project-pic img{
+	height: 200px;
+	border-radius: 30px;
+	padding: 10px;
+}
+
+.projects p {
+	padding: 10px;
+	line-height: 1.2em;
+}
+
+.projects .project-team {
+	padding-bottom: 2px;
+}
+
+.projects ul li {
+	padding: 2px;
+}
+
+.fourth h2 {
+	margin-top: 50px;
+}
+
+.fourth {
+	width: 90%;
+	margin: auto;
+	height: auto;
+	position: relative;
+}
+
+.fourth .hobby-carousel-container {
+	width: 70%;
+	margin: 2% auto;
+	display: flex;
+	overflow: hidden;
+	position: relative;
+}
+
+.fourth .hobby-carousel {
+	display: flex;
+}
+
+.fourth .hobby-carousel img {
+	width: 100%;
+	border-radius: 10px;
+}
+/* .fourth table tr td {
+	width: 30%;
+	padding: 1%;
+	margin: 2.3%;
+	/* box-shadow: 0px 0px 5px #8E8D8A;
+	border: 2.8px solid #D8C3A5;
+	background-color: #f6f6f0; 
+} */
+
+#back-btn, #next-btn {
+	font-size: 50px;
+	position: absolute;
+	top: 50%;
+	color: white;
+	z-index: 100;
+	opacity: 0.5;
+	cursor: pointer;
+	transition-duration: 0.5s;
+}
+
+#back-btn:hover, #next-btn:hover {
+	opacity: 0.8;
+}
+
+#back-btn {
+	left: 3%;
+}
+
+#next-btn {
+	right: 3%;
+}
+
+
+.fifth {
+	/* height: 70vh; */
+	position: relative;
+	font-size: 1.1em;
+}
+
+/* .fifth .contact-form-container {
+	margin: 10% auto;	
+
+} */
+
+.fifth .contact-form {
+	margin: 4% auto;
+	padding: 40px ;
+	width: 40%;
+	border: 2.8px solid #D8C3A5;
+	border-radius: 10px;
+	text-align: left;
+}
+
+.fifth .contact-form form {
+	margin-left: 25%;
+}
+
+.fifth .contact-form label p{
+	padding: 10px;
+	padding-left: none;	
+	padding-bottom: 2px;
+}
+
+.fifth .contact-form label input, .fifth .contact-form label textarea {
+	border: none;
+	margin: 4px;
+	padding: 8px;
+	font-size: 0.7em;
+	width: 90%;
+	border-radius: 7px;
+	transition-duration: 0.5s;
+	border-bottom: 3px solid #E85A4F;
+}
+
+.fifth .contact-form label textarea {
+	resize: none;
+	scroll-behavior: smooth;
+	height: 200px;
+}
+
+.fifth .contact-form label input[type=text]:focus {
+	background-color: wheat;
+	border: none;
+	box-shadow: none;
+	border: 1px solid #E85A4F;
+	
+}
+
+.fifth .contact-form label textarea:focus {
+	background-color: wheat;
+	border: 1px solid #E85A4F;
+}
+
+.fifth .contact-form button[type=submit] {
+	border: none;
+	padding: 10px;
+	font-size: 1em;
+	/* width: 15%; */
+	background-color: #E85A4F;
+	color: white;
+	border-radius: 40px;
+	margin-top: 10px;
+	float: right;
+}
+
+.fifth .main-contact {
+	padding: 20px;
+	position: absolute;
+	background-color: #E98074;
+	border-radius: 10px;
+	line-height: 1.2em;
+	width: 20%;
+	min-width: 20%;
+	max-width: 30%;
+	top: 43%;
+	left: 20%;
+
+}
+
+.fifth .main-contact #mail{
+	border-bottom: 1px dotted black;
+	padding: 2px;
+	font-size: 0.8em;	
+}
+
+.fifth .main-contact a .icons{
+	margin-top: 7px;
+	padding:  0 5px;
+	font-size: 55px;
+	/* background-color: white; */
 }
 
 @keyframes navLinksFadeIn {
@@ -249,6 +548,71 @@ body {
 	}
 }
 
+@media screen and ( max-height: 800px) {
+	
+	/* this is done to handle the copyright moving on the nav-bar  */
+	
+	.nav-bar footer {
+		display: none;
+	}
+	
+	.main footer {
+		display: block;
+	}
+}
+
+@media screen and ( max-width: 1500px) {
+	
+	/* handling contact form as it looks odd - only the mail link*/
+	.fifth .main-contact #mail {
+		font-size: 0.6em;
+	}
+
+	.fifth .main-contact a .icons {
+		font-size: 36px;
+	}
+	
+	.second {
+		height: 70vh;
+	}
+
+	.fifth .contact-form {
+		width: 45%;
+		position: relative;
+		left: 50px;
+	}
+
+}
+
+@media screen and ( max-width: 1280px) {
+	body {
+		font-size: 15px;
+	}
+
+	.fifth .contact-form {
+		width: 50%;
+		position: relative;
+		left: 50px;
+	}
+
+	.fifth .main-contact {
+		left: 16%;
+		width: 25%;
+		padding: 30px;
+	}
+}
+
+@media screen and ( max-width: 1024px) {
+
+	.nav-bar {
+		width: 24%;
+	}
+
+	body {
+		font-size: 12px;
+	}
+	
+}
 
 
 @media screen and ( max-width: 768px) {
@@ -282,6 +646,7 @@ body {
 		padding: 4px;
 		position: relative;
 		right: 65px;
+	
 	}
 
 	.nav-links {

@@ -32,3 +32,52 @@ const navSlide = function() {
 }
 
 navSlide();
+
+
+// handling carousel
+const hobbyCarousel = document.querySelector( '.hobby-carousel');
+const hobbyImages = document.querySelectorAll( '.hobby-carousel img');
+
+const backButton = document.querySelector( '#back-btn');
+const nextButton = document.querySelector( '#next-btn');
+
+// counter for rotating images
+let counter = 1;
+const carouselSize = hobbyImages[0].clientWidth;
+
+hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
+
+console.log( hobbyCarousel, hobbyImages, carouselSize);
+
+nextButton.addEventListener( 'click', ()=>{
+    hobbyCarousel.style.transition = 'transform 0.5s ease-in-out';
+    counter++;
+    hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
+    console.log(counter);
+});
+
+backButton.addEventListener( 'click', ()=>{
+    hobbyCarousel.style.transition = 'transform 0.5s ease-in-out';
+    counter--;
+    hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
+    console.log( counter);
+});
+
+
+hobbyCarousel.addEventListener( 'transitionend', ()=> {
+    if ( hobbyImages[counter].id == 'last-img') {
+        console.log( hobbyImages[counter]);
+        hobbyCarousel.style.transition = 'none';
+        counter = hobbyImages.length - 2;
+        hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
+        console.log('fired', counter)
+    }
+
+    if ( hobbyImages[counter].id == 'first-img') {
+        console.log( hobbyImages[counter]);
+        hobbyCarousel.style.transition = 'none';
+        counter = 1;
+        hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
+        console.log('fired', counter)
+    }
+})
