@@ -259,7 +259,7 @@ body {
 
 .main .first h2 {
 	position: absolute;
-	width: 80%;
+	width: 84%;
 	bottom: 14%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -408,7 +408,7 @@ body {
 	position: absolute;
 	top: 50%;
 	color: white;
-	z-index: 100;
+	z-index: 10;
 	opacity: 0.5;
 	cursor: pointer;
 	transition-duration: 0.5s;
@@ -436,6 +436,10 @@ body {
 /* .fifth .contact-form-container {
 	margin: 10% auto;	
 
+} */
+
+/* .fifth h2 {
+	margin-top: 10px;
 } */
 
 .fifth .contact-form {
@@ -491,7 +495,7 @@ body {
 	border: none;
 	padding: 10px;
 	font-size: 1em;
-	/* width: 15%; */
+	width: 40%;
 	background-color: #E85A4F;
 	color: white;
 	border-radius: 40px;
@@ -506,8 +510,6 @@ body {
 	border-radius: 10px;
 	line-height: 1.2em;
 	width: 20%;
-	min-width: 20%;
-	max-width: 30%;
 	top: 43%;
 	left: 20%;
 
@@ -516,7 +518,7 @@ body {
 .fifth .main-contact #mail{
 	border-bottom: 1px dotted black;
 	padding: 2px;
-	font-size: 0.8em;	
+	font-size: 0.78em;	
 }
 
 .fifth .main-contact a .icons{
@@ -565,22 +567,35 @@ body {
 	
 	/* handling contact form as it looks odd - only the mail link*/
 	.fifth .main-contact #mail {
-		font-size: 0.6em;
+		font-size: 0.66em;
+		padding-left: 0;
 	}
 
 	.fifth .main-contact a .icons {
 		font-size: 36px;
 	}
 	
-	.second {
-		height: 70vh;
-	}
-
 	.fifth .contact-form {
+		padding: 20px;
 		width: 45%;
 		position: relative;
 		left: 50px;
 	}
+
+	/* increasing the height due to vertical fitting of box */
+	.second {
+		height: 70vh;
+	}
+
+	.qual-box {
+		width: 90%;
+	}
+
+	/* making main line in one line  */
+	.main .first h2 {
+		width: 90%;
+	}
+
 
 }
 
@@ -598,8 +613,25 @@ body {
 	.fifth .main-contact {
 		left: 16%;
 		width: 25%;
-		padding: 30px;
+		padding: 20px;
 	}
+
+	.intro-box {
+		padding: 20px;
+	}
+
+	.qual-box {
+		width: 100%;
+	}
+
+	.main .first h2 {
+		font-size: 4em;
+	}
+
+	.fifth .main-contact #mail {
+		font-size: 0.7em;
+	}
+
 }
 
 @media screen and ( max-width: 1024px) {
@@ -608,17 +640,81 @@ body {
 		width: 24%;
 	}
 
-	body {
-		font-size: 12px;
+	.fifth .main-contact {
+
+		left: 16%;
+		width: 25%;
+		padding: 20px;
+
 	}
-	
+
+	.fifth .main-contact #mail {
+		position: relative;
+		right: 4px;
+	}
+
+	.intro-box {
+		width: 100%;
+	}
+
+	.second {
+		width: 70%;
+		padding: 20px;
+		margin: auto;
+		left: 20px;
+	}
+
+	.main .first h2 {
+		width: 78%;
+		font-size: 3.4em;
+	}
+
+	#back-btn, #next-btn {
+		font-size: 50px;
+	}
 }
 
+
+@media screen and ( max-width: 900px) {
+
+	.fifth .main-contact {
+		width: 28%;
+		top: 38%;
+	}
+
+	.fifth .main-contact a .icons {
+		padding: 2px;
+		font-size: 30px;
+	}
+
+	/* .intro-box {
+		width: 100%;
+	}
+
+	.second {
+		width: 90%;
+		padding: 20px;
+		margin: auto;
+	} */
+
+	.fifth .contact-form button[type=submit] {
+		width: 50%;
+	}
+
+	.fifth .main-contact #mail {
+		font-size: 0.55em;
+	}
+
+}
 
 @media screen and ( max-width: 768px) {
 
 	body {
 		overflow-x: hidden;
+	}
+
+	.nav-bar {
+		z-index: 20;
 	}
 
 	.nav-bar  hr, .nav-bar footer {
@@ -699,8 +795,38 @@ body {
 		transform: translateX( 0%);
 	}
 
+	/* adjusting the main part  */
+	.main {
+		width: 100%;
+	}
+
+	.main footer {
+		display: block;
+	}
+
+	/* making the image scalable in projects  */
+
+	.third .projects .project-pic img{
+		max-width: 80%;
+		/* height: 200px; */
+		padding-top: 100%;
+		border-radius: 30px;
+		padding: 10px;
+	}
+
+	#back-btn, #next-btn {
+		font-size: 40px;
+	}
+
 }
 
+@media screen and ( max-width: 600px) {
+
+	.fifth .main-contact #mail {
+		font-size: 0.52em;
+	}
+
+}
 
 @media screen and ( max-width: 500px) {
 
@@ -721,4 +847,80 @@ body {
 		height: 4px;
 	}
 
+	/* fixing the main body */
+
+	.body {
+		font-size: 12px;
+	}
+
+	.main .first h2 {
+		font-size: 2.5em;
+	}
+
+	.second .intro-box {
+		left: 48%;
+		font-size: 0.8em;
+	}
+
+	.projects {
+		flex-direction: column;
+	}
+
+	#project1, #project2 {
+		width: 98%;
+	}
+
+	/* fixing the contact form  */
+	
+	.fifth .contact-form {
+		margin: 0 ;
+		padding: 0px;
+		width: 70%;
+		margin-left: 4%;
+
+		position: relative;
+		top: 171px;
+	}
+	
+	.fifth .contact-form form {
+		margin-left: 0px;
+		padding: 20px;
+	}
+	
+	
+	.fifth .contact-form label input, .fifth .contact-form label textarea {
+		width: 100%;
+	}
+	
+	.fifth .contact-form label textarea {
+		height: 100px;
+	}
+	
+	
+	.fifth .contact-form button[type=submit] {
+		width: 100%;
+	}
+	
+	.fifth .main-contact {
+		position: relative;
+		margin: 20px auto;
+		left: 0;	
+		width: 70%;
+		top: -387px;
+	
+	}
+	
+	.fifth .main-contact #mail{
+		font-size: 0.8em;
+	}
+	
+
+
+}
+
+@media screen and ( max-width: 380px) {
+
+	.fifth .contact-form {
+		top: 190px;
+	}
 }
