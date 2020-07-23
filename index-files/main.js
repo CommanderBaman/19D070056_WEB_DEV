@@ -50,6 +50,7 @@ hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
 console.log( hobbyCarousel, hobbyImages, carouselSize);
 
 nextButton.addEventListener( 'click', ()=>{
+    if ( counter > hobbyImages.length - 2) return;
     hobbyCarousel.style.transition = 'transform 0.5s ease-in-out';
     counter++;
     hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
@@ -57,6 +58,7 @@ nextButton.addEventListener( 'click', ()=>{
 });
 
 backButton.addEventListener( 'click', ()=>{
+    if ( counter < 1) return;
     hobbyCarousel.style.transition = 'transform 0.5s ease-in-out';
     counter--;
     hobbyCarousel.style.transform = `translateX( ${ - carouselSize * counter}px)`;
@@ -81,3 +83,14 @@ hobbyCarousel.addEventListener( 'transitionend', ()=> {
         console.log('fired', counter)
     }
 })
+
+
+// resizing image if the aspect ratio is not correct
+
+const hutPicture = document.querySelector( '.main .first img');
+if ( window.innerWidth / window.innerHeight >= 2 ) {
+
+    hutPicture.style.width = window.innerWidth + "px";
+}
+
+console.log( window.innerWidth/window.innerHeight, hutPicture.style.width)

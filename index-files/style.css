@@ -246,14 +246,16 @@ body {
 .first {
 	position: relative;
 	align-content: center;
+	overflow: hidden;
 }
 
 .main .first img {
 	height: 100vh;
 	opacity: 0.9;
-	width: 100%;
+
 	-webkit-mask-image: linear-gradient(to top, transparent 5%, black 10%);
 	mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+	
 
 }
 
@@ -273,7 +275,7 @@ body {
 
 .second {
 	/* capping out at 60vh */
-	height: 60vh;
+	min-height: 500px;
 	width: 75%;
 	margin: auto;
 	align-content: center;
@@ -406,7 +408,7 @@ body {
 #back-btn, #next-btn {
 	font-size: 50px;
 	position: absolute;
-	top: 50%;
+	top: 45%;
 	color: white;
 	z-index: 10;
 	opacity: 0.5;
@@ -826,6 +828,11 @@ body {
 		font-size: 0.52em;
 	}
 
+	.first img {
+		position: relative;
+		right: 300px;
+	}
+
 }
 
 @media screen and ( max-width: 500px) {
@@ -923,4 +930,19 @@ body {
 	.fifth .contact-form {
 		top: 190px;
 	}
+
+	.second .qual-box .qual-photo-left img, .second .qual-box .qual-text-right {
+
+		padding: 0;
+		margin: 0;
+	}
+
+	.second .qual-box .qual-text-right p {
+		padding: 5px;
+	}
+
+	.fifth .main-contact {
+		left: 14px;
+	}
+
 }
